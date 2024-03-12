@@ -66,7 +66,9 @@ const PasswordGenerator = () => {
         <button
           className={styles.btn}
           id="clipboard"
-          title="Copy"
+          title=""
+          aria-label="Copy"
+          data-tooltip="Copy"
           onClick={copyPassword}
         >
           <MdContentCopy />
@@ -139,6 +141,9 @@ const PasswordGenerator = () => {
         <div className={styles.centerButton}>
           <button
             type="button"
+            title=""
+            aria-label="Regenerate"
+            data-tooltip="Regenerate"
             className={styles.btn}
             onClick={handleGenerateClick}
           >
