@@ -14,6 +14,7 @@ const PasswordGenerator = () => {
   const [generatedPassword, setGeneratedPassword] = useState<string>("");
   const [passwordProps, setPasswordProps] =
     useState<PasswordProps>(initialValues);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {
     const newPassword = generatePassword2(initialValues);
@@ -26,6 +27,14 @@ const PasswordGenerator = () => {
   };
 
   const copyPassword = () => {
+    if (generatedPassword) {
+      navigator.clipboard.writeText(generatedPassword);
+      setShowModal(true);
+
+      setTimeout(() => {
+        setShowModal(false);
+      }, 1000);
+    }
     return;
   };
 
@@ -62,6 +71,9 @@ const PasswordGenerator = () => {
         >
           <MdContentCopy />
         </button>
+      </div>
+      <div className={`${styles.modal} ${showModal ? styles.show : ""}`}>
+        <div className={styles.modalContent}>Password Copied</div>
       </div>
       <form>
         <div className={styles.options}>
