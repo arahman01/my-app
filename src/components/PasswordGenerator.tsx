@@ -8,6 +8,7 @@ import {
 } from "../utility/utility";
 import styles from "./PasswordGenerator.module.css";
 import { MdContentCopy } from "react-icons/md";
+import { CiRedo } from "react-icons/ci";
 
 const PasswordGenerator = () => {
   const [generatedPassword, setGeneratedPassword] = useState<string>("");
@@ -78,6 +79,7 @@ const PasswordGenerator = () => {
               max={maxPasswordLength}
               value={passwordProps.length}
               onChange={handleChange}
+              className={styles.rangeStyles}
             />
           </div>
           <div className={styles.option}>
@@ -87,6 +89,7 @@ const PasswordGenerator = () => {
               name="includeUpperCase"
               checked={passwordProps.includeUpperCase}
               onChange={handleChange}
+              className={styles.checkboxStyles}
             />
           </div>
           <div className={styles.option}>
@@ -96,6 +99,7 @@ const PasswordGenerator = () => {
               name="includeLowerCase"
               checked={passwordProps.includeLowerCase}
               onChange={handleChange}
+              className={styles.checkboxStyles}
             />
           </div>
           <div className={styles.option}>
@@ -105,6 +109,7 @@ const PasswordGenerator = () => {
               name="includeNumber"
               checked={passwordProps.includeNumber}
               onChange={handleChange}
+              className={styles.checkboxStyles}
             />
           </div>
           <div className={styles.option}>
@@ -114,6 +119,7 @@ const PasswordGenerator = () => {
               name="includeSymbols"
               checked={passwordProps.includeSymbols}
               onChange={handleChange}
+              className={styles.checkboxStyles}
             />
           </div>
         </div>
@@ -124,7 +130,7 @@ const PasswordGenerator = () => {
             className={styles.btn}
             onClick={handleGenerateClick}
           >
-            Generate
+            <CiRedo />
           </button>
         </div>
       </form>
