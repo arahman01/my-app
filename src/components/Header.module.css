@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--primary-4);
+  color: var(--primary-white);
+  padding: 10px;
+  font-size: var(--size-4);
+}
+
+.title {
+  margin: 0;
+}
