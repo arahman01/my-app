@@ -6,16 +6,12 @@ import Header from "./components/Header";
 const App = () => {
   return (
     <div>
-      <div>
-        <Header title="SafeKeys Password Generator"></Header>
-      </div>
-      <div>
+      <Header title="SafeKeys Password Generator"></Header>
+      <main>
         <PasswordGenerator />
-      </div>
+      </main>
     </div>
   );
-
-  //<div className="App">password generator</div>;
 };
 
 export default App;

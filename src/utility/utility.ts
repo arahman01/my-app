@@ -16,7 +16,8 @@ const initialValues: PasswordProps = {
 };
 // END - TYPES
 
-const maxPasswordLength: number = 128;
+const minPasswordLength: number = 5;
+const maxPasswordLength: number = 64;
 const lowerCasedAlphabets = [..."abcdefghijklmnopqrstuvwxyz".split("")];
 const upperCasedAlphabets = lowerCasedAlphabets.map((alphabet) =>
   alphabet.toUpperCase()
@@ -102,6 +103,7 @@ const generatePassword2 = (options: Partial<PasswordProps>): string => {
 
 export {
   initialValues,
+  minPasswordLength,
   maxPasswordLength,
   generatePassword,
   generatePassword2,
