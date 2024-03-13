@@ -2,6 +2,8 @@
 
 KeySafe is a robust password generator designed to provide you with a strong, customizable password of your preference. This project empowers users to effortlessly generate random passwords tailored to their specific requirements. With KeySafe, users can specify the length of the password and include options for lowercase, uppercase, numerical, and special characters. Moreover, users can regenerate passwords until they find one that suits their needs perfectly, and seamlessly copy it for immediate use.
 
+You can view the deployed project: https://safekeys.netlify.app/
+
 ## Technologies Used
 
 1. React
